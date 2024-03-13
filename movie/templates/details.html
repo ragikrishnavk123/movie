@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 27rem ">
+  <img src="{{m.image.url}}" class="card-img-top" height="200px" width="100%" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{m.name}}</h5>
+    <p class="card-text">{{m.desc}}</p>
+      <p class="card-text">{{m.year}}</p>
+    <a href="{% url 'app:update' m.name %}" class="btn btn-primary">Update</a>
+    <a href="{% url 'app:delete' m.name %}" class="btn btn-primary">Delete</a>
+
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}
